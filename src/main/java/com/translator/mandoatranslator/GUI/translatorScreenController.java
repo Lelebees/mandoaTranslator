@@ -1,4 +1,4 @@
-package mandoatranslator.GUI;
+package com.translator.mandoatranslator.GUI;
 import javafx.*;
 public class translatorScreenController {
 }
