@@ -11,4 +11,16 @@ public class Translation {
         this.mandoaPronounciation = mandoaPronounciation;
         this.englishWord = englishWord;
     }
+
+    public String getEnglishWord() {
+        return this.englishWord;
+    }
+
+    public String getMandoaPronounciation() {
+        return this.mandoaPronounciation;
+    }
+
+    public String getMandoaWord() {
+        return this.mandoaWord;
+    }
 }

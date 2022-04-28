@@ -18,4 +18,16 @@ public class translatorScreenController {
     Button translateLanguagesButton;
     @FXML
     MenuBar menuBar;
+
+    public void Reverse(){
+
+    }
+
+    public void OpenAbout(){
+
+    }
+
+    public void Translate(){
+
+    }
 }
