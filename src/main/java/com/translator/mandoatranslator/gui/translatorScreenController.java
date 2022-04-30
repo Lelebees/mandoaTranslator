@@ -1,9 +1,11 @@
-package com.translator.mandoatranslator.GUI;
+package com.translator.mandoatranslator.gui;
 
-import com.translator.mandoatranslator.Applogic.Machinations;
-import com.translator.mandoatranslator.Domain.TranslationDirection;
+import com.translator.mandoatranslator.applogic.Machinations;
+import com.translator.mandoatranslator.domain.TranslationDirection;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
+import java.io.IOException;
 
 public class translatorScreenController {
     @FXML
@@ -35,8 +37,8 @@ public class translatorScreenController {
         }
     }
 
-    public void OpenAbout(){
-
+    public void OpenAbout() throws IOException {
+        java.awt.Desktop.getDesktop().browse(java.net.URI.create("https://github.com/Lelebees/mandoaTranslator"));
     }
 
     public void Translate(){

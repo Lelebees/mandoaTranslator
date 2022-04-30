@@ -1,10 +1,10 @@
-package com.translator.mandoatranslator.Data;
+package com.translator.mandoatranslator.data;
 
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.translator.mandoatranslator.Domain.Dictionary;
-import com.translator.mandoatranslator.Domain.Translation;
+import com.translator.mandoatranslator.domain.Dictionary;
+import com.translator.mandoatranslator.domain.Translation;
 
 import java.io.IOException;
 import java.io.Reader;

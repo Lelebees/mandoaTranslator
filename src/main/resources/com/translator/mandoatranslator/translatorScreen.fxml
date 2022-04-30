@@ -5,49 +5,44 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.translator.mandoatranslator.GUI.translatorScreenController">
-   <children>
-      <HBox alignment="CENTER" layoutX="170.0" layoutY="140.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <VBox alignment="CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
-               <children>
-                  <Label fx:id="leftTranslatorLabel" text="English" textAlignment="CENTER">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextArea fx:id="leftTranslatorInput" prefHeight="200.0" prefWidth="200.0" />
-               </children>
-               <HBox.margin>
-                  <Insets left="10.0" />
-               </HBox.margin>
-            </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
-               <children>
-                  <Button fx:id="swapLanguagesButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Reverse" prefWidth="64.0" text="Reverse" textAlignment="CENTER" />
-                  <Button fx:id="translateLanguagesButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#Translate" prefWidth="64.0" text="Translate" textAlignment="CENTER" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" spacing="5.0" HBox.hgrow="ALWAYS">
-               <children>
-                  <Label fx:id="rightTranslatorLabel" text="Mando' a" textAlignment="CENTER">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextArea fx:id="rightTranslatorInput" editable="false" prefHeight="200.0" prefWidth="200.0" />
-               </children>
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </VBox>
-         </children>
-      </HBox>
-      <MenuBar fx:id="menuBar" prefWidth="600.0">
-         <menus>
-            <Menu mnemonicParsing="false" text="Help" />
-            <Menu mnemonicParsing="false" onAction="#OpenAbout" text="About" />
-         </menus>
-      </MenuBar>
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.translator.mandoatranslator.gui.translatorScreenController">
+   <HBox alignment="CENTER" layoutX="170.0" layoutY="140.0" spacing="10.0" AnchorPane.bottomAnchor="0.0"
+         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" spacing="5.0" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets left="10.0"/>
+         </HBox.margin>
+         <Label fx:id="leftTranslatorLabel" text="English" textAlignment="CENTER">
+            <font>
+               <Font size="18.0"/>
+            </font>
+         </Label>
+         <TextArea fx:id="leftTranslatorInput" prefHeight="200.0" prefWidth="200.0"/>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" HBox.hgrow="ALWAYS">
+         <Button fx:id="swapLanguagesButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                 onAction="#Reverse" prefWidth="64.0" text="Reverse" textAlignment="CENTER"/>
+         <Button fx:id="translateLanguagesButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true"
+                 mnemonicParsing="false" onAction="#Translate" prefWidth="64.0" text="Translate"
+                 textAlignment="CENTER"/>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" spacing="5.0"
+            HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets right="10.0"/>
+         </HBox.margin>
+         <Label fx:id="rightTranslatorLabel" text="Mando' a" textAlignment="CENTER">
+            <font>
+               <Font size="18.0"/>
+            </font>
+         </Label>
+         <TextArea fx:id="rightTranslatorInput" editable="false" prefHeight="200.0" prefWidth="200.0"/>
+      </VBox>
+   </HBox>
+   <MenuBar fx:id="menuBar" prefWidth="600.0">
+      <Menu mnemonicParsing="false" text="Help"/>
+      <Menu mnemonicParsing="false" onAction="#OpenAbout" text="About"/>
+   </MenuBar>
 </AnchorPane>

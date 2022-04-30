@@ -1,4 +1,4 @@
-package com.translator.mandoatranslator.Domain;
+package com.translator.mandoatranslator.domain;
 
 public class Translation {
     private final String MANDOA;

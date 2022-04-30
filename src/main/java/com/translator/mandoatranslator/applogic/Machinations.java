@@ -1,8 +1,8 @@
-package com.translator.mandoatranslator.Applogic;
+package com.translator.mandoatranslator.applogic;
 
-import com.translator.mandoatranslator.Domain.Dictionary;
-import com.translator.mandoatranslator.Domain.Translation;
-import com.translator.mandoatranslator.Domain.TranslationDirection;
+import com.translator.mandoatranslator.domain.Dictionary;
+import com.translator.mandoatranslator.domain.Translation;
+import com.translator.mandoatranslator.domain.TranslationDirection;
 
 import java.util.ArrayList;
 
