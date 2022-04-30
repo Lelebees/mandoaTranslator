@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Machinations {
 
-    public String Translate(TranslationDirection translationDirection, String sourceText) {
+    public static String Translate(TranslationDirection translationDirection, String sourceText) {
         String[] sourceWords = sourceText.split(" ");
         ArrayList<String> returnWords = new ArrayList<>();
         String returnText = "";
@@ -21,7 +21,7 @@ public class Machinations {
         return returnText;
     }
 
-    public String getTranslatedWord(String word, TranslationDirection translationDirection){
+    public static String getTranslatedWord(String word, TranslationDirection translationDirection){
 //        Find the correct translation
         for (Translation translation : Dictionary.translations) {
             if (translationDirection == TranslationDirection.ENGLISHTOMANDOA&& word.equals(translation.getEnglishWord())){

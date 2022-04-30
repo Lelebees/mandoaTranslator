@@ -1,5 +1,7 @@
 package com.translator.mandoatranslator.GUI;
 
+import com.translator.mandoatranslator.Applogic.Machinations;
+import com.translator.mandoatranslator.Domain.TranslationDirection;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -19,8 +21,18 @@ public class translatorScreenController {
     @FXML
     MenuBar menuBar;
 
-    public void Reverse(){
+    TranslationDirection translationDirection = TranslationDirection.ENGLISHTOMANDOA;
 
+    public void Reverse(){
+        if (translationDirection == TranslationDirection.ENGLISHTOMANDOA){
+            translationDirection = TranslationDirection.MANDOATOENGLISH;
+            leftTranslatorLabel.setText("Mando'a");
+            rightTranslatorLabel.setText("English");
+        } else {
+            translationDirection = TranslationDirection.ENGLISHTOMANDOA;
+            leftTranslatorLabel.setText("English");
+            rightTranslatorLabel.setText("Mando'a");
+        }
     }
 
     public void OpenAbout(){
@@ -28,6 +40,7 @@ public class translatorScreenController {
     }
 
     public void Translate(){
+        rightTranslatorInput.setText(Machinations.Translate(translationDirection, leftTranslatorInput.getText()));
 
     }
 }

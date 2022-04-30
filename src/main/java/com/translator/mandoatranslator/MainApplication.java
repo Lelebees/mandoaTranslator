@@ -14,7 +14,7 @@ public class MainApplication extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("translatorScreen.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-            stage.setTitle("Hello!");
+            stage.setTitle("Mando'a Translator");
             stage.setScene(scene);
             stage.show();
             JSONReader.Read();
