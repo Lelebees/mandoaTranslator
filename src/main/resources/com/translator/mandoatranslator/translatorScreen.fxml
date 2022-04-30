@@ -35,7 +35,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextArea fx:id="rightTranslatorInput" disable="true" prefHeight="200.0" prefWidth="200.0" />
+                  <TextArea fx:id="rightTranslatorInput" editable="false" prefHeight="200.0" prefWidth="200.0" />
                </children>
                <HBox.margin>
                   <Insets right="10.0" />

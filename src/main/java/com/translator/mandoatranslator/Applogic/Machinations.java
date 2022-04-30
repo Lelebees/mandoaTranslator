@@ -13,7 +13,23 @@ public class Machinations {
         ArrayList<String> returnWords = new ArrayList<>();
         String returnText = "";
         for (String word : sourceWords) {
-            returnWords.add(getTranslatedWord(word, translationDirection));
+            String translatedWord = getTranslatedWord(word, translationDirection);
+            if (translatedWord.endsWith("?")) {
+                translatedWord = getTranslatedWord(translatedWord.substring(0, translatedWord.length() -1), translationDirection);
+                translatedWord += "?";
+            }
+            returnWords.add(translatedWord);
+        }
+//        TODO: fix words not translating when any punctuation is at the end of a word.
+        String lastWordInList = returnWords.get(returnWords.size() - 1);
+
+        if (translationDirection == TranslationDirection.ENGLISHTOMANDOA && lastWordInList.endsWith("?")) {
+//                Add tion to the front of the list.
+            returnWords.add(0, "tion");
+        } else if (translationDirection == TranslationDirection.MANDOATOENGLISH && sourceWords[0].equals("tion")) {
+//                Add the questionmark to the end of returnwords, and delete tion from the list.
+            returnWords.add("?");
+            returnWords.remove(0);
         }
         for (String word : returnWords) {
             returnText = returnText.concat(word + " ");
