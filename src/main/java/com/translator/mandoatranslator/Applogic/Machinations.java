@@ -23,8 +23,8 @@ public class Machinations {
 
     public String getTranslatedWord(String word, TranslationDirection translationDirection){
 //        Find the correct translation
-        for (Translation translation : Dictionary.getTranslations()) {
-            if (translationDirection == TranslationDirection.ENGLISHTOMANDOA && word.equals(translation.getEnglishWord())){
+        for (Translation translation : Dictionary.translations) {
+            if (translationDirection == TranslationDirection.ENGLISHTOMANDOA&& word.equals(translation.getEnglishWord())){
 //                More complicated stuff can go here later, it just needs to work for now
                 return translation.getMandoaWord();
             } else if (translationDirection == TranslationDirection.MANDOATOENGLISH && word.equals(translation.getMandoaWord())){

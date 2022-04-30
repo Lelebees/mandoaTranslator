@@ -1,5 +1,6 @@
 package com.translator.mandoatranslator;
 
+import com.translator.mandoatranslator.Data.JSONReader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,6 +17,7 @@ public class MainApplication extends Application {
             stage.setTitle("Hello!");
             stage.setScene(scene);
             stage.show();
+            JSONReader.Read();
         } catch (Exception e){
             e.printStackTrace();
             System.out.println(e.getMessage());

@@ -1,26 +1,26 @@
 package com.translator.mandoatranslator.Domain;
 
 public class Translation {
-    private String mandoaWord;
-    private String mandoaPronounciation;
-    private String englishWord;
+    private final String MANDOA;
+    private final String PRONUNCIATION;
+    private final String ENGLISH;
 //    private String description;
 
     public Translation(String mandoaWord, String mandoaPronounciation, String englishWord){
-        this.mandoaWord = mandoaWord;
-        this.mandoaPronounciation = mandoaPronounciation;
-        this.englishWord = englishWord;
+        this.MANDOA = mandoaWord;
+        this.PRONUNCIATION = mandoaPronounciation;
+        this.ENGLISH = englishWord;
     }
 
     public String getEnglishWord() {
-        return this.englishWord;
+        return this.ENGLISH;
     }
 
     public String getMandoaPronounciation() {
-        return this.mandoaPronounciation;
+        return this.PRONUNCIATION;
     }
 
     public String getMandoaWord() {
-        return this.mandoaWord;
+        return this.MANDOA;
     }
 }
